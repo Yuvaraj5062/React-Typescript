@@ -22,6 +22,7 @@ const onClick=()=>{
     }
     return (
         <div>
+          <h2>simple useRef Example </h2>
           <input  type="text" ref={input} 
           onChange={(e)=>setInput(e.target.value)}/>
           <button onClick={onClick}>click me</button>

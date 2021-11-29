@@ -1,6 +1,9 @@
 import React, { useRef } from 'react';
 import './App.css';
 import Callback1 from './component/callback/callback1';
+import { ChildContext } from './component/hooks/context/ChildContext';
+import { ParentContextProvider } from './component/hooks/context/ParentContext';
+
 import Main from './component/hooks/Useref/main';
 import Useref from './component/hooks/Useref/useref';
 
@@ -12,18 +15,24 @@ function App() {
     <div className="App">
       {/* <Local/> */}
       {/* <Generic1/> */}
-       <Callback1 onSubmit={function (email: string, password: string): void {
+       {/* <Callback1 onSubmit={function (email: string, password: string): void {
         throw new Error('Function not implemented.');
-      } } /> 
+      } } />  */}
 
-      {/* <Formik2 /> */}
+      
 
 
  {/* basic example of useRef */}
     <Useref />
+    <hr />
      {/* forwardRef */}
     <Main />
-    
+    <hr />
+
+    {/* Context */}
+    <ParentContextProvider>
+        <ChildContext />
+      </ParentContextProvider>
     </div>
 
   );
