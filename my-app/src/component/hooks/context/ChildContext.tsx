@@ -27,9 +27,11 @@ export const ChildContext = () => {
           Set Default Theme
         </button>
 
-       
+        
       </div>
-    
+      <div style={useTheme.theme}>
+         Context 
+        </div>
       <Layout />
     </div>
   )

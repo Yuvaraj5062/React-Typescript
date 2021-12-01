@@ -23,7 +23,6 @@ export default function Layout() {
         <div className="d-inline-flex p-4">
         <button type="button" className="btn btn-outline-primary"
           onClick={ChangeTheme}
-          
         >
           Change Theme
         </button>

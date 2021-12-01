@@ -6,6 +6,7 @@ import { ParentContextProvider } from './component/hooks/context/ParentContext';
 
 import Main from './component/hooks/Useref/main';
 import Useref from './component/hooks/Useref/useref';
+import Routing from './component/routing/Routing';
 
 
 const url ='/song.mpeg'
@@ -20,19 +21,8 @@ function App() {
       } } />  */}
 
       
-
-
- {/* basic example of useRef */}
-    <Useref />
-    <hr />
-     {/* forwardRef */}
-    <Main />
-    <hr />
-
-    {/* Context */}
-    <ParentContextProvider>
-        <ChildContext />
-      </ParentContextProvider>
+<Routing />
+    
     </div>
 
   );
