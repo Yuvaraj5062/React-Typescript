@@ -10,6 +10,7 @@ import Useref from "../hooks/Useref/useref";
 import Main from "../hooks/Useref/main";
 import { ChildContext } from "../hooks/context/ChildContext";
 import { ParentContextProvider } from "../hooks/context/ParentContext";
+import Formik2 from "../formik/formik2";
 
 function Routing() {
     return (
@@ -21,6 +22,7 @@ function Routing() {
 
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
+                            <Link  to="/formik" className="nav-item nav-link " ><span>formik</span></Link>
                             <Link  to="/forwardref" className="nav-item nav-link " ><span>forwardref</span></Link>
                             <Link to="/useref" className="nav-item nav-link" >useref</Link>
                             <Link to="/context" className="nav-item nav-link" >Context</Link>
@@ -31,6 +33,7 @@ function Routing() {
                 <div>
 
                     <Routes>
+                        <Route path="/formik" element={<Formik2 />} />
                         <Route path="/useref" element={<Useref />} />
                         <Route path="/forwardref" element={<Main />} />
                         <Route path="/context" element={<ParentContextProvider>
